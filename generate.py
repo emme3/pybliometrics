@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
         # get the results
         x = ScopusSearch(
-            f'ABS ( "data mining" ) OR ABS ( "machine learning" ) OR TITLE ( "data mining" ) OR TITLE ( "machine learning" ) AND TITLE ( "material" ) OR ABS ( "material" ) OR SRCTITLE ( "material" ) AND SUBJAREA ( mate ) AND DOCTYPE ( "AR" ) AND SRCTYPE( j ) AND PUBYEAR = {year} AND NOT SUBJAREA (medi ) AND NOT SUBJAREA ( immu ) AND NOT SUBJAREA ( BIOC ) AND NOT SUBJAREA ( busi )',
+            f'TITLE-ABS-KEY(AI OR "artificial intelligence" OR "hybrid intelligence" OR "collective intelligence" OR "human-machine" OR "human-AI" OR "human-bot*" OR "AI-employee*") AND ("human-agent collaboration" OR "Human-Agent Interaction" OR "human-agent team*") AND trust* AND (team* OR collaborat* OR group) AND (organis* OR coordinat* OR cooperat* OR communicat* OR interact* OR manag* OR work* OR facilitat* OR innovat*) DOCTYPE(ar)',
             view="STANDARD")
         print(f"Year: {year} , Results count: {len(x.results)}")
 
