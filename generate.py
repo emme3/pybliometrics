@@ -22,7 +22,7 @@ if __name__ == "__main__":
         try:
             # Get the results from ScopusSearch
             x = ScopusSearch(
-                f'TITLE-ABS-KEY ( ai OR "artificial intelligence" OR "hybrid intelligence" OR "collective intelligence" OR "human-machine" OR "human-AI" OR "human-bot*" OR "AI-employee*" ) AND ( "human-agent collaboration" OR "human-agent interact*" OR "human-agent team*" ) AND trust* AND distrust* AND ( team* OR collaborat* OR group ) AND ( organis* OR coordinat* OR cooperat* OR communicat* OR interact* OR manag* OR work* OR facilitat* OR innovat* ) DOCTYPE ( ar ) AND PUBYEAR = {year}',
+                f'TITLE-ABS-KEY(AI OR "artificial intelligence" OR "hybrid intelligence" OR "collective intelligence" OR "human-machine" OR "human-AI" OR "human-bot*" OR "AI-employee*") AND ("human-agent collaboration" OR "human-agent interact*" OR "human-agent team*") AND trust* AND distrust* AND (team* OR collaborat* OR group) AND (organis* OR coordinat* OR cooperat* OR communicat* OR interact* OR manag* OR work* OR facilitat* OR innovat*) AND DOCTYPE(ar) AND PUBYEAR = {year}',
                 view="STANDARD",
                 cursor=False)
             print(f"Year: {year} , Results count: {len(x.results)}")
