@@ -12,7 +12,7 @@ if __name__ == "__main__":
     pybliometrics.scopus.init()
 
     # Begin script
-    for year in range(2013, 2024):
+    for year in range(1980, 2025):
         # Make the folder to store the data for the year
         current_path = os.getcwd()
         folder_path = os.path.join(current_path, "output", str(year))
